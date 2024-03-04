@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bm3ghypnn71qo"
+path="res://.godot/imported/man.aseprite-87ba407da56fb3f9e9e05fcd0edb5ab1.res"
+
+[deps]
+
+source_file="res://scenes/man/man.aseprite"
+dest_files=["res://.godot/imported/man.aseprite-87ba407da56fb3f9e9e05fcd0edb5ab1.res"]
+
+[params]
+

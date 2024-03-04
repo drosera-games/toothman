@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://cix2vo6ikbrsb"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_28c5q"]
+[ext_resource type="PackedScene" uid="uid://bubxxxxubyoh" path="res://scenes/man/man.tscn" id="2_68lmj"]
+[ext_resource type="Texture2D" uid="uid://cmvlvh55cnukf" path="res://scenes/main/background.png" id="3_rh5xv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_86pvj"]
+size = Vector2(68.8534, 34.1736)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_28c5q")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(-576, 0)
+scale = Vector2(2.25, 1.267)
+texture = ExtResource("3_rh5xv")
+centered = false
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scenes/main/background.aseprite"
+}
+
+[node name="Background2" type="Sprite2D" parent="Background"]
+texture_filter = 1
+position = Vector2(576, 0)
+scale = Vector2(2.25, 1.267)
+texture = ExtResource("3_rh5xv")
+centered = false
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scenes/main/background.aseprite"
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="GateSpawn" type="Marker2D" parent="."]
+position = Vector2(1154, 0)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="Man" parent="." instance=ExtResource("2_68lmj")]
+position = Vector2(308, 263)
+collision_mask = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(576, 324)
+scale = Vector2(16.7312, 18.962)
+shape = SubResource("RectangleShape2D_86pvj")
+
+[connection signal="timeout" from="Timer" to="." method="spawnGate"]
+[connection signal="player_died" from="Man" to="." method="_on_player_died"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_level_exited"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_body_level_exited"]

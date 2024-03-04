@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://crtwedj6madi3"]
+
+[ext_resource type="Script" path="res://scenes/gate/gate.gd" id="1_0exys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqvhx"]
+size = Vector2(32, 64)
+
+[node name="Gate" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_0exys")
+
+[node name="ScoringArea" type="CollisionShape2D" parent="."]
+position = Vector2(32, 32)
+shape = SubResource("RectangleShape2D_pqvhx")

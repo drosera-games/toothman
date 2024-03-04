@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://crikmq6fptg64"
+path="res://.godot/imported/gumtop.aseprite-36e49bee2123c3ea6594cf51971e325a.res"
+
+[deps]
+
+source_file="res://scenes/tooth/gumtop.aseprite"
+dest_files=["res://.godot/imported/gumtop.aseprite-36e49bee2123c3ea6594cf51971e325a.res"]
+
+[params]
+

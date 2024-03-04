@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://fd2q7dmbo07p"]
+
+[ext_resource type="Texture2D" uid="uid://b0cqs22qfs4xo" path="res://scenes/tooth/gumtop.png" id="1_jd3i0"]
+[ext_resource type="Script" path="res://scenes/tooth/tooth.gd" id="1_myy6a"]
+[ext_resource type="Texture2D" uid="uid://bm2j01x7de2lh" path="res://scenes/tooth/toothtop.png" id="2_utgq5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxmp0"]
+resource_local_to_scene = true
+size = Vector2(64, 125.5)
+
+[node name="Tooth" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_myy6a")
+
+[node name="Pieces" type="Node2D" parent="."]
+position = Vector2(32, 32)
+
+[node name="Gums" type="Node2D" parent="Pieces"]
+
+[node name="GumTop" type="Sprite2D" parent="Pieces/Gums"]
+texture_filter = 1
+position = Vector2(32, 32)
+rotation = -3.14159
+texture = ExtResource("1_jd3i0")
+centered = false
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scenes/tooth/gumchunk.aseprite"
+}
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false
+}
+
+[node name="Tooth" type="Node2D" parent="Pieces"]
+
+[node name="ToothTop" type="Sprite2D" parent="Pieces/Tooth"]
+texture_filter = 1
+position = Vector2(32, 96)
+rotation = 3.14159
+texture = ExtResource("2_utgq5")
+centered = false
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scenes/tooth/toothtop.aseprite"
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 63.25)
+shape = SubResource("RectangleShape2D_mxmp0")

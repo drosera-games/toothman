@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bihxi3w7npf6g"
+path="res://.godot/imported/toothchunk.aseprite-8119b6197387572cc06d5f349c52357b.res"
+
+[deps]
+
+source_file="res://scenes/tooth/toothchunk.aseprite"
+dest_files=["res://.godot/imported/toothchunk.aseprite-8119b6197387572cc06d5f349c52357b.res"]
+
+[params]
+

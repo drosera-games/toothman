@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bubxxxxubyoh"]
+
+[ext_resource type="Script" path="res://scenes/man/man.gd" id="1_6arnl"]
+[ext_resource type="Texture2D" uid="uid://cdhvygjsyrb35" path="res://scenes/man/man.png" id="1_qab7w"]
+
+[node name="Man" type="CharacterBody2D"]
+script = ExtResource("1_6arnl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_qab7w")
+metadata/_aseprite_wizard_config_ = {
+"i_mode": 1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"slice": "",
+"source": "res://scenes/man/man.aseprite"
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(7, -28.4, 19, -17.4, 19, -15.4, 22, -12.4, 22, -3, 20.8, -3, 19.8, 2, 18.4, 2, 13.4, 7, 6.1, 7, 11, 10.5, 11, 13.4, 9.4, 15, 7.7, 15, 5, 13, 5, 14.5, 2, 16.5, 2, 18.4, 0.400002, 20, -2.6, 20, -5.6, 23, -9.4, 23, -11, 21.4, -11, 14, -8.2, 14, -5, 13.2, -5, 10.3, -9, 11.3, -9, 9.4, -10.2, 8.2, -9.7, 7, -8.6, 7, -7.6, 5, -3.4, 5, -2, 3.6, -2, -0.5, -8, -4.5, -8, -6.6, -12, -11.6, -12, -20.2, -9.7, -26, -8.5, -26, -6.5, -29, -5, -29, -5, -30, 7, -30)
